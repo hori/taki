@@ -80,15 +80,15 @@ ActiveRecord::Schema.define(version: 20131125045829) do
   add_index "project_file_media_query_selectors", ["project_file_media_query_id"], name: "index_selectors_on_project_file_media_query_id", using: :btree
 
   create_table "project_files", force: true do |t|
-    t.string   "path"
-    t.string   "extension"
+    t.string   "attachment_file_name"
+    t.string   "attachment_content_type"
+    t.integer  "attachment_file_size"
+    t.datetime "attachment_updated_at"
     t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "project_files", ["extension"], name: "index_project_files_on_extension", using: :btree
-  add_index "project_files", ["path"], name: "index_project_files_on_path", unique: true, using: :btree
   add_index "project_files", ["status"], name: "index_project_files_on_status", using: :btree
 
   create_table "rails_admin_histories", force: true do |t|
