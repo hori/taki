@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131114023024) do
+ActiveRecord::Schema.define(version: 20131125045829) do
 
   create_table "admin_users", force: true do |t|
     t.string   "email",               default: "", null: false
@@ -27,6 +27,69 @@ ActiveRecord::Schema.define(version: 20131114023024) do
   end
 
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
+
+  create_table "project_file_media_queries", force: true do |t|
+    t.integer  "project_file_id"
+    t.text     "raw"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "project_file_media_queries", ["project_file_id"], name: "index_media_queries_on_project_file_id", using: :btree
+
+  create_table "project_file_media_query_selector_properties", force: true do |t|
+    t.integer  "project_file_media_query_selector_id"
+    t.string   "name"
+    t.string   "value"
+    t.integer  "is_important",                         limit: 1
+    t.integer  "line"
+    t.integer  "start"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "project_file_media_query_selector_properties", ["is_important"], name: "index_properties_on_is_important", using: :btree
+  add_index "project_file_media_query_selector_properties", ["name"], name: "index_properties_on_name", using: :btree
+  add_index "project_file_media_query_selector_properties", ["project_file_media_query_selector_id"], name: "index_properties_on_project_file_media_query_selector_id", using: :btree
+  add_index "project_file_media_query_selector_properties", ["value"], name: "index_properties_on_value", using: :btree
+
+  create_table "project_file_media_query_selector_similarities", force: true do |t|
+    t.integer  "current_selector_id"
+    t.integer  "compared_selector_id"
+    t.float    "property"
+    t.float    "value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "project_file_media_query_selector_similarities", ["compared_selector_id"], name: "index_similarities_on_compared_selector_id", using: :btree
+  add_index "project_file_media_query_selector_similarities", ["current_selector_id", "compared_selector_id"], name: "index_similarities_on_selector_ids", unique: true, using: :btree
+  add_index "project_file_media_query_selector_similarities", ["current_selector_id"], name: "index_similarities_on_current_selector_id", using: :btree
+
+  create_table "project_file_media_query_selectors", force: true do |t|
+    t.integer  "project_file_media_query_id"
+    t.string   "name"
+    t.integer  "line"
+    t.integer  "start"
+    t.text     "raw"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "project_file_media_query_selectors", ["name"], name: "index_selectors_on_name", type: :fulltext
+  add_index "project_file_media_query_selectors", ["project_file_media_query_id"], name: "index_selectors_on_project_file_media_query_id", using: :btree
+
+  create_table "project_files", force: true do |t|
+    t.string   "path"
+    t.string   "extension"
+    t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "project_files", ["extension"], name: "index_project_files_on_extension", using: :btree
+  add_index "project_files", ["path"], name: "index_project_files_on_path", unique: true, using: :btree
+  add_index "project_files", ["status"], name: "index_project_files_on_status", using: :btree
 
   create_table "rails_admin_histories", force: true do |t|
     t.text     "message"
