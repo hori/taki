@@ -18,8 +18,6 @@ mysql> create database taki_development;
 ```sh
 cd taki
 bundle install
-rails g devise:install
-rails g devise admin_user
 rake db:migrate RAILS_ENV=development
 ```
 
