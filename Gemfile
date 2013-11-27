@@ -60,6 +60,10 @@ group :development, :test do
   # gem 'debugger', '1.6.0'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'factory_girl_rails'
+  gem 'spring'
 end
 
 # User Production
