@@ -1,0 +1,15 @@
+doctype 5
+html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"
+  head
+    == render :partial => 'commons/head'
+
+  body
+    header
+      == render :partial => 'commons/header'
+
+    = yield
+
+    footer
+      == render :partial => 'commons/footer'
+
+    == render :partial => 'commons/append_body'

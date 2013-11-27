@@ -4,6 +4,13 @@ Taki::Application.routes.draw do
   devise_for :admin_users
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
+  root 'files#index'
+  resources :files do
+    member do
+      get 'z_index'
+    end
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
