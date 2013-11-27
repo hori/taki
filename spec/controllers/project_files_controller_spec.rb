@@ -1,4 +1,6 @@
-describe FilesController do
+require 'spec_helper'
+
+describe ProjectFilesController do
   def valid_attributes
     { status: "upload",
       attachment_file_name: 'style.css',

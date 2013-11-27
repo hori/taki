@@ -1,8 +1,9 @@
-class FilesController < TakiController
+class ProjectFilesController < TakiController
   before_action :set_project_file, only: [:show, :z_index]
 
   # GET /
   def index
+    @project_file = ProjectFile.new
   end
 
   # GET /files/:id
