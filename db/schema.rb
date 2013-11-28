@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131125045829) do
+ActiveRecord::Schema.define(version: 20131125045730) do
 
   create_table "admin_users", force: true do |t|
     t.string   "email",               default: "", null: false
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20131125045829) do
   create_table "project_file_media_queries", force: true do |t|
     t.integer  "project_file_id"
     t.integer  "project_file_selector_id"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -69,10 +70,10 @@ ActiveRecord::Schema.define(version: 20131125045829) do
 
   create_table "project_file_selectors", force: true do |t|
     t.integer  "project_file_id"
-    t.string   "name"
+    t.text     "name"
+    t.text     "raw"
     t.integer  "line"
     t.integer  "start"
-    t.text     "raw"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

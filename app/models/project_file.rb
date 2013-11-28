@@ -21,7 +21,7 @@ class ProjectFile < ActiveRecord::Base
     parse.load_uri!(self.attachment.path)
     parse.rules.each do |rule|
       project_file_selector = self.project_file_selectors.create({
-        :name => rule[:rules].selectors.first,
+        :name => rule[:rules].selectors.join(', '),
         :raw => rule[:rules].to_s,
       })
       project_file_media_query = self.project_file_media_queries.create({
