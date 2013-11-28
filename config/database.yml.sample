@@ -3,7 +3,6 @@ development:
   database: taki_development
   username: root
   host: localhost
-  password: inuinu
   pool: 5
   timeout: 5000
 
@@ -12,7 +11,6 @@ test:
   database: taki_test
   username: root
   host: localhost
-  password: inuinu
   pool: 5
   timeout: 5000
 
@@ -21,6 +19,5 @@ production:
   database: taki
   username: root
   host: localhost
-  password: inuinu
   pool: 5
   timeout: 5000

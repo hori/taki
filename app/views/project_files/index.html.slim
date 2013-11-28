@@ -4,14 +4,17 @@
 - content_for :description do
   = @description
 
-div.main-visual
+.main-visual
   h1.logo
-    img src="/assets/logo2.png"
-  div.lead-text The "taki" is css ci tools.<br>This text is hogehoge. This is also.
+    = image_tag image_path('logo.png')
+  .lead-text
+    The "taki" is css ci tools.
+    br
+    This text is hogehoge. This is also.
 
-div.contents
-  div.inner
-    div.form-upload
+.contents
+  .inner
+    .form-upload
       = form_for(@project_file) do |f|
         = f.text_field :status, class: "display-filename", readonly: true
         .input-file-box
