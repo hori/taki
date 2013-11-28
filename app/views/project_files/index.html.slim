@@ -4,6 +4,7 @@
 - content_for :description do
   = @description
 
-- form_for(@project_file) do |f|
+= form_for(@project_file) do |f|
   = f.label :attachment
   = f.file_field :attachment
+  = f.submit

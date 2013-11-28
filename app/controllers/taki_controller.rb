@@ -1,6 +1,4 @@
 class TakiController < ApplicationController
-  before_filter :detect_locale
-
   # 404
   rescue_from ActionController::RoutingError,
     ActiveRecord::RecordNotFound,
@@ -10,14 +8,6 @@ class TakiController < ApplicationController
   rescue_from Exception, :with => :render_500 if Rails.env.production?
 
   private
-  def default_url_options(options = {})
-    { :locale => I18n.locale }
-  end
-
-  def detect_locale
-    I18n.locale = params[:locale]
-  end
-
   def render_404(exception = nil)
     logger.info "404 Exception #{exception.message}" unless exception.nil?
     render :template => "errors/404", :status => 404, :layout => false, :content_type => 'text/html'
