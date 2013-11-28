@@ -38,8 +38,8 @@ gem 'paperclip'
 # Use markdown parse engine.
 gem 'redcarpet'
 
-# Use image upload plugin.
-gem 'paperclip'
+# Use CSS Parser.
+gem 'css_parser'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
