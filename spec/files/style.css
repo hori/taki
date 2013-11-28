@@ -1,3 +1,61 @@
-a {
-  margin : 10px;
+@media screen and (min-aspect-ratio: 1/1) {
+  h1{
+    margin:10px 20px;
+    width: 100px;
+    line-height: 20px;
+    color: #a0a0a0;
+    background: #B00100;
+  }
+  .fukurou, .ezofukurou{
+    display:block;
+    overflow:hidden;
+    height: 200px;
+    width: 300px;
+    background: url(hoge.png) no-repeat;
+    border: solid 1px #B00100;
+  }
+}
+
+@media screen and (min-aspect-ratio: 1/2) {
+  h1{
+    margin:5px 20px;
+    width: 100px;
+    line-height: 15px;
+    color: #a0a0a0;
+    background: #B00100;
+  }
+  .fukurou, .ezofukurou{
+    display:block;
+    overflow:hidden;
+    height: 100px;
+    width: 300px;
+    background: url(hoge.png) no-repeat;
+    border: solid 1px #B00100;
+  }
+}
+
+h2{
+  margin:5px 20px;
+  width: 100px;
+  line-height: 15px;
+  color: #a0a0a0;
+  background: #B00100;
+}
+
+.konohaduku{
+  display:inline-block;
+  float: left;
+  background: #f0f0f0;
+  border: solid 1px #B00100;
+}
+
+a{
+  color: #B00100;
+}
+a:hover{
+  color: #900100;
+}
+
+a.mimiduku{
+ text-decoration: none;
 }
