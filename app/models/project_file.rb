@@ -1,5 +1,5 @@
 class ProjectFile < ActiveRecord::Base
-  attr_accessible :attachment
+  attr_accessible :attachment, :status
   has_many :project_file_media_queries
   has_many :project_file_selectors
 
@@ -21,11 +21,11 @@ class ProjectFile < ActiveRecord::Base
     parse.load_uri!(self.attachment.path)
     parse.rules.each do |rule|
       project_file_selector = self.project_file_selectors.create({
-        :name => rule.selectors.first,
+        :name => rule[:rules].selectors.first,
         :raw => rule[:rules].to_s,
       })
       project_file_media_query = self.project_file_media_queries.create({
-        :project_file_selector_id => project_file_selector.id
+        :project_file_selector => project_file_selector.id
       })
     end
   end
