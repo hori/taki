@@ -1,0 +1,10 @@
+- content_for :title do
+  = @title
+
+- content_for :description do
+  = @description
+
+= form_for(@project_file) do |f|
+  = f.label :attachment
+  = f.file_field :attachment
+  = f.submit

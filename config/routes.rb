@@ -4,8 +4,8 @@ Taki::Application.routes.draw do
   devise_for :admin_users
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
-  root 'files#index'
-  resources :files do
+  root 'project_files#index'
+  resources :project_files do
     member do
       get 'z_index'
     end
