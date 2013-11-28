@@ -25,7 +25,7 @@ class ProjectFile < ActiveRecord::Base
         :raw => rule[:rules].to_s,
       })
       project_file_media_query = self.project_file_media_queries.create({
-        :name => rule[:media_types],
+        :name => rule[:media_types].join(' '),
         :project_file_selector_id => project_file_selector.id,
       }) unless rule[:media_types].blank?
     end
