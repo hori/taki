@@ -13,10 +13,8 @@ class SimilaritiesController < TakiController
     properties_a = ProjectFileMediaQuerySelectorProperty.where(project_file_media_query_selector_id: selector_id_a).all
     properties_b = ProjectFileMediaQuerySelectorProperty.where(project_file_media_query_selector_id: selector_id_b).all
 
+    diff = properties_a - properties_b
 
-    for property in properties do
-      pp property
-    end
 
   end
 
