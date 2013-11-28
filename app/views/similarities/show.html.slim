@@ -5,3 +5,28 @@
   = @description
 
 h2 hello similarity
+table
+  tr
+    th
+      = "selectorA"
+      span.bindIncrementalSearchA serach
+    th
+      = "selectorB"
+      span.bindIncrementalSearchB serach
+    th
+      = "properties"
+      span.bindOrderProp
+    th
+      = "values"
+      span.bindOrderValue
+  tr
+    td
+      = ".hoge"
+      span.invisible.bindInvisibleProperties position: absolute;<br>top: 0;<br>left: 0;<br>background: rgba(0, 0, 0, 0.7);
+    td
+      = ".hoge"
+      span.invisible.bindInvisibleProperties position: absolute;<br>top: 0;<br>left: 0;<br>background: rgba(0, 0, 0, 0.7);
+    td
+      = "100"
+    td
+      = "20"

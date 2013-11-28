@@ -14,3 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$(function () {
+    $('.bindChangeFile').change(function(){
+        var str = $(this).val();
+        $('.display-filename').val(str);
+    })
+});
