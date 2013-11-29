@@ -27,4 +27,8 @@ Taki::Application.configure do
   # number of complex assets.
   config.assets.debug = true
   config.assets.initialize_on_precompile = true
+
+  # Sass-rails
+  config.sass.line_comments = false
+  config.sass.cache = false
 end
