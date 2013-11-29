@@ -19,6 +19,9 @@ class ProjectFilesController < TakiController
   # GET /files/:id/z-indexes
   # GET /files/:id/z-indexes.json
   def z_index
+    selector_ids = @project_file.project_file_selectors.pluck(:id)
+    @properties = ProjectFileSelectorProperty.where({ name: 'z-index', project_file_selector_id: selector_ids}).order(value: :desc)
+    @properties.sort! {|a, b| a.value.to_i <=> b.value.to_i }
   end
 
   private

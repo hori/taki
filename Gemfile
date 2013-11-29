@@ -75,3 +75,6 @@ end
 gem 'rails_admin'
 gem 'devise', '3.0.0.rc'
 gem 'protected_attributes'
+
+# Use pry-rails
+gem 'pry-rails'
