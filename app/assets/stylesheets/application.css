@@ -24,7 +24,7 @@ body {
     text-align: center;
     color: #fff;
 }
-.logo {
+.main-visual .logo {
     padding: 100px 0 30px;
 }
 .lead-text {
@@ -33,6 +33,27 @@ body {
     text-shadow: 0px 2px 0px rgba(100, 100, 100, 1);
     font-family: "Kozuka Gothic Pro", "小塚ゴシック Pro";
 }
+.common-header {
+    height: 60px;
+    background: url(/assets/bg.png);
+    color: #fff;
+}
+.common-header .inner {
+    padding: 0;
+}
+.common-header .lead-text {
+    float: right;
+    line-height: 60px;
+    font-weight: normal;
+}
+.status {
+    height: 149px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+.status .lead-text {
+    line-height: 150px;
+}
 .contents {
     background: #fefefe;
 }
@@ -40,6 +61,9 @@ body {
     width: 800px;
     margin: 0 auto;
     padding: 30px 0;
+}
+.bottom .inner {
+    padding: 60px 0;
 }
 .form-upload {
     width: 600px;
@@ -105,8 +129,6 @@ span { text-shadow: 0px 1px 0px #a11c3d; }
     box-shadow: none;
     background-color: #963c2c;
 }
-
-
 footer {
     padding: 30px 0;
     border-top: 1px solid #ccc;
