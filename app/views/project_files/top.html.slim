@@ -1,0 +1,21 @@
+- content_for :title do
+  = @title
+
+- content_for :description do
+  = @description
+
+.contents
+  .inner
+    .form-upload
+      = form_for(@project_file) do |f|
+        = f.text_field :status, class: "display-filename", readonly: true
+        .input-file-box
+          = f.file_field :attachment, class: "file bindChangeFile"
+        .submit-box
+          = f.submit class: "submit"
+
+    h2 Check upload file.
+    dl.clearfix
+      dt.link
+        = link_to "files", project_files_path
+      dd Check your upload file.

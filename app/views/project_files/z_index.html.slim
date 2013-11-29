@@ -18,4 +18,4 @@
             td= p.name
             td= p.value
     .prev
-      =link_to "back to Summary", {:controller => "project_files", :action => "show"}
+      =link_to "back to Summary", project_file_path(@project_file)

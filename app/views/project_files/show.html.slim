@@ -14,8 +14,12 @@
     h2 Check result
     dl.clearfix
       dt.link
-        = link_to "z-index", {:controller => "project_files", :action => "z_index"}
+        = link_to "z-index", z_index_project_file_path(@project_file)
       dd Check z-index property which is used in the CSS.
+    dl.clearfix
+      dt.link
+        = link_to "similarity", similarity_project_file_path(@project_file)
+      dd Check similarity property which is used in the CSS.
     h2 Summary of this CSS
     dl.clearfix
       dt Selectors Num

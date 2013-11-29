@@ -2,13 +2,19 @@ class ProjectFilesController < TakiController
   before_action :set_project_file, only: [:show, :z_index, :similarity]
 
   # GET /
-  def index
+  def top
     @project_file = ProjectFile.new
   end
 
   def create
     @project_file = ProjectFile.create( file_params )
     redirect_to project_file_url(@project_file)
+  end
+
+  # GET /project_files
+  # GET /project_files.json
+  def index
+    @project_files  = ProjectFile.limit(5).order(created_at: :desc)
   end
 
   # GET /project_files/:id
