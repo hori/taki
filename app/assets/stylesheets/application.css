@@ -15,11 +15,10 @@
     margin: 0;
     padding: 0;
 }
-body {
-    background: rgba(58, 153, 216, 0.6);
+html {
 }
-header {
-    background: url(/assets/bg.png) bottom center;
+body {
+    background: url(/assets/bg.png) top center;
 }
 .main-visual {
     height: 400px;
@@ -37,8 +36,8 @@ header {
 }
 .common-header {
     height: 60px;
-    background: url(/assets/bg.png);
     color: #fff;
+    background: rgba(58, 153, 216, 0.5);
 }
 .common-header .inner {
     position: relative;
@@ -59,14 +58,10 @@ header {
 }
 .status {
     text-align: center;
-    border-bottom: 1px solid #ccc;
 }
 .status .lead-text {
-    margin: 40px 0;
+    margin: 60px 0 40px;
     line-height: 35px;
-}
-.contents {
-    background: url(/assets/bg.png) top center;
 }
 .inner {
     width: 800px;
@@ -257,4 +252,8 @@ table td {
     height: auto;
     overflow: hidden;
     /**/
+}
+
+.foot-logo {
+    text-align: center;
 }
