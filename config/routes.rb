@@ -8,10 +8,8 @@ Taki::Application.routes.draw do
   resources :project_files do
     member do
       get 'z_index'
+      get 'similarity'
     end
-  end
-
-  resources :similarities do
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
