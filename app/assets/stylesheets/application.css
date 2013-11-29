@@ -16,11 +16,14 @@
     padding: 0;
 }
 body {
-    background: #f0f0f0;
+    background: rgba(58, 153, 216, 0.6);
+}
+header {
+    background: url(/assets/bg.png) bottom center;
 }
 .main-visual {
     height: 400px;
-    background: url(/assets/bg.png);
+    background: rgba(58, 153, 216, 0.5);
     text-align: center;
     color: #fff;
 }
@@ -30,7 +33,6 @@ body {
 .lead-text {
     font-size: 26px;
     line-height: 2em;
-    text-shadow: 0px 2px 0px rgba(100, 100, 100, 1);
     font-family: "Kozuka Gothic Pro", "小塚ゴシック Pro";
 }
 .common-header {
@@ -64,7 +66,7 @@ body {
     line-height: 35px;
 }
 .contents {
-    background: #fefefe;
+    background: url(/assets/bg.png) top center;
 }
 .inner {
     width: 800px;
@@ -84,13 +86,13 @@ body {
     width: 428px;
     margin: 3px 0 0;
     padding: 9px 10px 9px;
-    border: 1px solid #ddd;
+    /*border: 1px solid #ddd;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
-    box-shadow: 0 -1px 1px rgba(50, 50, 50, 0.3);
+    box-shadow: 0 -1px 1px rgba(50, 50, 50, 0.3);*/
     font-size: 14px;
 }
 .input-file-box {
@@ -121,29 +123,28 @@ body {
     padding: 2px 10px 0;
     color: #fff;
     border: none;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
+    /*border-radius: 5px;
+    -webkit-border-radius: 5px;*/
     font-size: 16px;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .submit {
-    box-shadow: 0 5px 0 #b04633;
-    background: #ca503a;
-span { text-shadow: 0px 1px 0px #a11c3d; }
+    /*box-shadow: 0 5px 0 #b04633;*/
+    background: #3a99d8;
+}/*span { text-shadow: 0px 1px 0px #a11c3d; }
 }
 .submit:hover { background-color: #e35a42; }
 .submit:active {
     margin: 35px 0 10px;
     box-shadow: none;
     background-color: #963c2c;
-}
+}*/
 footer {
     padding: 30px 0;
-    border-top: 1px solid #ccc;
 }
 .copyright {
-    color: #999;
+    color: #fff;
     text-align: center;
     font-size: 12px;
 }
