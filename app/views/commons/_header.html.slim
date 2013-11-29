@@ -1,0 +1,16 @@
+- if controller.action_name == "index"
+.main-visual
+  h1.logo
+    = image_tag image_path('logo.png')
+  .lead-text
+    The "taki" is css ci tools.
+    br
+    This text is hogehoge. This is also.
+- else
+  .common-header
+    .inner
+      h1.logo
+        a href="/"
+          = image_tag image_path('logo-bottom.png')
+      .lead-text
+        The "taki" is css ci tools.

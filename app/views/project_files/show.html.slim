@@ -4,6 +4,8 @@
 - content_for :description do
   = @description
 
-.contents
+.status
+  .lead-text complete
+.contents.bottom
   .inner
     = link_to @project_file.attachment.url, @project_file.attachment.path
