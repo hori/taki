@@ -9,11 +9,13 @@
     table
       tbody
         tr
-          th selector
-          th property
-          th value
-        - @properties.each do |p|
+          th selector_id
+          th selector_id
+          th property similarity
+          th value similarity
+        - @simirarities.each do |s|
           tr
-            th= p.project_file_selector.name
-            td= p.name
-            td= p.value
+            th= s[:combination][0]
+            th= s[:combination][1]
+            td= s[:property_similarity]
+            td= s[:value_similarity]
