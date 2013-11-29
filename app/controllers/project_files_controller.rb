@@ -14,6 +14,8 @@ class ProjectFilesController < TakiController
   # GET /files/:id
   # GET /files/:id.json
   def show
+    selector_ids = @project_file.project_file_selectors.pluck(:id)
+    @properties  = ProjectFileSelectorProperty.where(project_file_selector_id: selector_ids)
   end
 
   # GET /files/:id/z-indexes

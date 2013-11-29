@@ -5,7 +5,20 @@
   = @description
 
 .status
-  .lead-text complete
+  .lead-text
+    = "Finished analyze of CSS."
+    br
+    = "You can check summary for CSS."
 .contents.bottom
   .inner
-    = link_to @project_file.attachment.url, @project_file.attachment.path
+    h2 Check result
+    dl.clearfix
+      dt.link
+        = link_to "z-index", {:controller => "project_files", :action => "z_index"}
+      dd Check z-index property which is used in the CSS.
+    h2 Summary of this CSS
+    dl.clearfix
+      dt Selectors Num
+      dd
+        = @properties.count
+        span selectors

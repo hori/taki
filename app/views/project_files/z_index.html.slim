@@ -17,3 +17,5 @@
             th= p.project_file_selector.name
             td= p.name
             td= p.value
+    .prev
+      =link_to "back to Summary", {:controller => "project_files", :action => "show"}
