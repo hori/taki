@@ -1,0 +1,19 @@
+- content_for :title do
+  = @title
+
+- content_for :description do
+  = @description
+
+.contents
+  .inner
+    table
+      tbody
+        tr
+          th selector
+          th property
+          th value
+        - @properties.each do |p|
+          tr
+            th= p.project_file_selector.name
+            td= p.name
+            td= p.value
