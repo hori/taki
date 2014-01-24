@@ -37,3 +37,6 @@ pickle-email-*.html
 
 # Ignore RubyMine
 .idea
+
+# Ignore MacOS
+.DS_Store
