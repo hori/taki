@@ -32,3 +32,5 @@ Taki::Application.configure do
   config.sass.line_comments = false
   config.sass.cache = false
 end
+
+process = `bundle exec whenever --update-crontab`
