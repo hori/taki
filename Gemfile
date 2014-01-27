@@ -58,6 +58,9 @@ gem 'unicorn'
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
+# Use rails tasks
+gem 'whenever', :require => false
+
 # Use debugger
 group :development, :test do
   # gem 'debugger', '1.6.0'
