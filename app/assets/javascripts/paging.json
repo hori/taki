@@ -1,0 +1,112 @@
+{
+    "paging": {
+        "current_page": 1,
+        "per_page": 3,
+        "total_pages": 2,
+        "total": 6
+    },
+    "similarities": [
+        {
+            "current_selector_id": 10,
+            "compared_selector_id": 12,
+            "property": 0.25,
+            "value": 0.5
+        },
+        {
+            "current_selector_id": 10,
+            "compared_selector_id": 12,
+            "property": 0.25,
+            "value": 0.5
+        },
+        {
+            "current_selector_id": 10,
+            "compared_selector_id": 12,
+            "property": 0.25,
+            "value": 0.5
+        },
+        {
+            "current_selector_id": 10,
+            "compared_selector_id": 12,
+            "property": 0.25,
+            "value": 0.5
+        },
+        {
+            "current_selector_id": 10,
+            "compared_selector_id": 12,
+            "property": 0.25,
+            "value": 0.5
+        },
+        {
+            "current_selector_id": 10,
+            "compared_selector_id": 12,
+            "property": 0.25,
+            "value": 0.5
+        },
+        {
+            "current_selector_id": 10,
+            "compared_selector_id": 12,
+            "property": 0.25,
+            "value": 0.5
+        },
+        {
+            "current_selector_id": 10,
+            "compared_selector_id": 12,
+            "property": 0.25,
+            "value": 0.5
+        },
+        {
+            "current_selector_id": 10,
+            "compared_selector_id": 12,
+            "property": 0.25,
+            "value": 0.5
+        },
+        {
+            "current_selector_id": 10,
+            "compared_selector_id": 12,
+            "property": 0.25,
+            "value": 0.5
+        },
+        {
+            "current_selector_id": 10,
+            "compared_selector_id": 12,
+            "property": 0.25,
+            "value": 0.5
+        },
+        {
+            "current_selector_id": 10,
+            "compared_selector_id": 12,
+            "property": 0.25,
+            "value": 0.5
+        },
+        {
+            "current_selector_id": 10,
+            "compared_selector_id": 12,
+            "property": 0.25,
+            "value": 0.5
+        },
+        {
+            "current_selector_id": 10,
+            "compared_selector_id": 12,
+            "property": 0.25,
+            "value": 0.5
+        },
+        {
+            "current_selector_id": 10,
+            "compared_selector_id": 12,
+            "property": 0.25,
+            "value": 0.5
+        },
+        {
+            "current_selector_id": 10,
+            "compared_selector_id": 12,
+            "property": 0.25,
+            "value": 0.5
+        },
+        {
+            "current_selector_id": 10,
+            "compared_selector_id": 12,
+            "property": 0.25,
+            "value": 0.5
+        }
+    ]
+}
