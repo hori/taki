@@ -1,3 +1,2 @@
-- /var/nanapi/apps/s.nanapi.jp/pc/jp/css/style.css
-- /var/nanapi/apps/s.nanapi.jp/pc/jp/css/individual/style.css
-- /var/nanapi/apps/s.nanapi.jp/sp/jp/css/style.css
+stylesheets:
+  - /path/style.css

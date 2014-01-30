@@ -33,4 +33,5 @@ Taki::Application.configure do
   config.sass.cache = false
 end
 
-process = `bundle exec whenever --update-crontab`
+#process = `bundle exec whenever --update-crontab`
+#process = `RAILS_ENV=development bundle exec rake daemon:update_checker`

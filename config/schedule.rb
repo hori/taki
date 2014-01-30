@@ -19,8 +19,9 @@
 
 # Learn more: http://github.com/javan/whenever
 
-set :output, {:error => 'log/error.log', :standard => 'log/cron.log'}
-set :environment, :development
-every 2.minutes do
-  rake "file_update_check:update"
-end
+# TODO:一旦利用停止
+# set :output, {:error => 'log/error.log', :standard => 'log/cron.log'}
+# set :environment, :development
+# every 2.minutes do
+  # rake "file_update_check:update"
+# end

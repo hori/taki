@@ -54,6 +54,10 @@ GEM
     coffee-script-source (1.6.3)
     css_parser (1.3.5)
       addressable
+    daemons (1.1.9)
+    daemons-rails (1.2.1)
+      daemons
+      multi_json (~> 1.0)
     debug_inspector (0.0.2)
     devise (3.0.0.rc)
       bcrypt-ruby (~> 3.0)
@@ -72,6 +76,7 @@ GEM
     font-awesome-rails (3.2.1.3)
       railties (>= 3.2, < 5.0)
     formatador (0.2.4)
+    god (0.13.3)
     guard (2.2.4)
       formatador (>= 0.2.4)
       listen (~> 2.1)
@@ -251,8 +256,10 @@ DEPENDENCIES
   binding_of_caller
   coffee-rails (~> 4.0.0)
   css_parser
+  daemons-rails
   devise (= 3.0.0.rc)
   factory_girl_rails
+  god
   guard-rspec
   jbuilder (~> 1.2)
   jquery-rails
