@@ -17,4 +17,5 @@ class TakiController < ApplicationController
     logger.info "500 Exception #{exception.message}" unless exception.nil?
     render :template => "errors/500", :status => 500, :layout => false, :content_type => 'text/html'
   end
+
 end
