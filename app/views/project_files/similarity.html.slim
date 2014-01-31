@@ -6,18 +6,19 @@
 
 .contents
   .inner
-    table
+    table#table
       tbody
         tr
           th selector_id
           th selector_id
           th property similarity
           th value similarity
-        - @simirarities.each do |s|
-          tr
-            th= s[:combination][0]
-            th= s[:combination][1]
-            td= s[:property_similarity]
-            td= s[:value_similarity]
-    .prev
+        /- @simirarities.each do |s|
+        /  tr
+        /    th= s[:combination][0]
+        /    th= s[:combination][1]
+        /    td= s[:property_similarity]
+        /    td= s[:value_similarity]
+    #pager
+    .prev-btn
       =link_to "back to Summary", project_file_path(@project_file)

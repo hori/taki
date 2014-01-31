@@ -4,6 +4,9 @@ meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
 
 = stylesheet_link_tag    "application", :media => "all"
 = javascript_include_tag "application"
+- if params[:action] = "similarities"
+  = javascript_include_tag "similarities"
+
 = csrf_meta_tags
 
 link href="#{image_path("touch-icon/apple-touch-icon-144x144-precomposed.png") }" rel='apple-touch-icon-precomposed' sizes='144x144'

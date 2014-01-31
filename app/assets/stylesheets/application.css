@@ -213,7 +213,7 @@ table tr:last-child td {
 table td {
     font-weight: normal;
 }
-.prev a {
+.prev-btn a {
     display: block;
     width: 100%;
     margin: 15px 0 0;
@@ -228,7 +228,7 @@ table td {
     text-align: center;
     text-decoration: none;
 }
-.prev a:hover {
+.prev-btn a:hover {
     color: #333;
     background: #ccc;
 }
@@ -256,4 +256,26 @@ table td {
 
 .foot-logo {
     text-align: center;
+}
+
+#pager {
+    width: 50%;
+    height: 2em;
+    margin: 0 auto;
+    position: relative;
+}
+#pager li {
+    height: 2em;
+    line-height: 2em;
+    list-style: none;
+}
+.prev {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.next {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
