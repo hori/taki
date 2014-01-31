@@ -36,9 +36,9 @@ class ProjectFilesController < TakiController
   # GET /project_files/:id/similarity.json
   def similarity
     # @simirarities = @project_file.calc_similarities
-    simirarities = ProjectFileSelector.includes(:project_file_selector_similarities).references(:property)
-    # simirarities = ProjectFileSelector.joins(:project_file_selector_similarities)
-    render :json => simirarities
+    # simirarities = ProjectFileSelector.includes(:project_file_selector_similarities).references(:property)
+    similarities = ProjectFileSelector.where(project_file_id: @project_file.id).map(&:project_file_selector_similarities)
+    render :json => similarities.page(1).par(10)
   end
 
   private
